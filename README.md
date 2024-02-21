@@ -34,7 +34,8 @@ print(1>2)
 ### Присвоить значения трем переменным и вывести их в консоль, используя только две строки редактора кода.
 
 ```python
-print(1>2)
+a,b,c = 52,53,54
+print(a,b,c)
 ```
 ### Результат.
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/task2_2.PNG)
