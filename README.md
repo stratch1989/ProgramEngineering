@@ -79,11 +79,15 @@ print(var[:5], "my", var[6:])
 ### Результат.
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_2/img/task6.png)
 
-## Лабораторная работа №7
-- Текст задания
-- Оформленный код
-- Скрины консоли
-- Краткие Выводы
+## Самостоятельная работа №7
+### Узнайте длину предложения ‘Hello World’, результат выведите в консоль. Программа должна занимать не более двух строк редактора кода.
+
+```python
+var = "Hello World"
+print(len(var))
+```
+### Результат.
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_2/img/task7.png)
 
 ## Лабораторная работа №8
 - Текст задания
