@@ -6,9 +6,9 @@
 | Задание | Сам_раб |
 | ------  | ------ |
 | Задание 1 | + |
-| Задание 2 | - |
-| Задание 3 | - |
-| Задание 4 | - |
+| Задание 2 | + |
+| Задание 3 | + |
+| Задание 4 | + |
 | Задание 5 | - |
 | Задание 6 | - |
 | Задание 7 | - |
@@ -28,7 +28,7 @@
 print(1>2)
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/task1.PNG)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_2/img/task1.PNG)
 
 ## Самостоятельная работа №2
 ### Присвоить значения трем переменным и вывести их в консоль, используя только две строки редактора кода.
@@ -38,7 +38,7 @@ a,b,c = 52,53,54
 print(a,b,c)
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/task2.PNG)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_2/img/task2.PNG)
 
 ## Самостоятельная работа №3
 ### Реализуйте ввод данных в программу, через консоль, в виде только целых чисел (тип данных int). То есть при вводе буквенных символов в консоль, программа не должна работать. Программа должна занимать не более двух строк редактора кода.
@@ -47,7 +47,7 @@ print(a,b,c)
 res = int(input('Введите число: '))
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/task3.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_2/img/task3.png)
   
 ## Самостоятельная работа №4
 ### Создайте только одну строковую переменную. Длина строки должна не превышать 5 символов. На выходе мы должны получить строку длиной не менее 16 символов. Программа должна занимать не более двух строк редактора кода.
@@ -57,7 +57,7 @@ stringVar = (input('Введите строку: ')[:5])
 print(stringVar*16)
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/task4.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_2/img/task4.png)
 
 ## Лабораторная работа №5
 - Текст задания
