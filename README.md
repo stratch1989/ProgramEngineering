@@ -29,7 +29,7 @@ for i in range(2):
 print(var)
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/task1.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/task_1.png)
 
 ## Самостоятельная работа №2
 ### Присвоить значения трем переменным и вывести их в консоль, используя только две строки редактора кода.
