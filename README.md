@@ -40,7 +40,7 @@ for i in var[::-1]:
     print(i)
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/task2.PNG)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/task2.PNG)
 
 ## Самостоятельная работа №3
 ### Реализуйте ввод данных в программу, через консоль, в виде только целых чисел (тип данных int). То есть при вводе буквенных символов в консоль, программа не должна работать. Программа должна занимать не более двух строк редактора кода.
@@ -49,7 +49,7 @@ for i in var[::-1]:
 res = int(input('Введите число: '))
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/task2_3.PNG)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/task2_3.PNG)
   
 ## Лабораторная работа №4
 - Текст задания
