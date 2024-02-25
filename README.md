@@ -83,7 +83,7 @@ print(test.startswith('The') and test.endswith('end'))
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/task4.png)
 
 ## Самостоятельная работа №5
-### Составьте программу, результатом которой будет данный вывод в консоль:<br>![Меню](https://github.com/segamega-drive/software_engineering/blob/Theme_3/img/5.1.png)<br>Программу нужно составить из данных фрагментов кода:<br>![Меню](https://github.com/segamega-drive/software_engineering/blob/Theme_3/img/5.2.png)<br>Строки кода можно использовать только один раз. Не обязательно использовать все строки кода.
+### Составьте программу, результатом которой будет данный вывод в консоль:<br>![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/5.1.png)<br>Программу нужно составить из данных фрагментов кода:<br>![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/5.2.png)<br>Строки кода можно использовать только один раз. Не обязательно использовать все строки кода.
 
 ```python
 string = 'hello'
