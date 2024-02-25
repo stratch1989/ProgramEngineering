@@ -59,11 +59,28 @@ else:
 ### Результат.
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/task3.png)
   
-## Лабораторная работа №4
-- Текст задания
-- Оформленный код
-- Скрины консоли
-- Краткие Выводы
+## Самостоятельная работа №4
+### Манипулирование строками. Напишите программу на Python, которая принимает предложение (на английском) в качестве входных данных от пользователя. Выполните следующие операции и отобразите результаты:<br>• Выведите длину предложения.<br>• Переведите предложение в нижний регистр.<br>• Подсчитайте количество гласных (a, e, i, o, u) в предложении.<br>• Замените все слова "ugly" на "beauty".<br>• Проверьте, начинается ли предложение с "The" и заканчивается ли на "end".<br>Проверьте работу программы минимум на 3 предложениях, чтобы охватить проверку всех поставленных условий.
+
+```python
+test = "The tTEST_ssiis acqwe ooo UuUu, ugly sdfwd qweqwincefvueugly end"
+
+print("Длина текста:", len(test))
+lowerText = test.lower()
+print("Текст в нижнем регистре:", lowerText)
+exampleLetters = "aeiou"
+howManyLetters = 0
+for u in exampleLetters:
+    for i in lowerText:
+        if i == u:
+            howManyLetters += 1
+    print(f"Букв {u} в тексте: {howManyLetters}")
+    howManyLetters = 0
+print(lowerText.replace('ugly', 'beauty'))
+print(test.startswith('The') and test.endswith('end'))
+```
+### Результат.
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/task4.png)
 
 ## Лабораторная работа №5
 - Текст задания
