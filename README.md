@@ -127,4 +127,4 @@ def calculatingArea(a, b, c):
 ```
 
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/task5.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_4/img/task5.png)
