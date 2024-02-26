@@ -89,27 +89,21 @@ for i in range(0, 5):
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_4/img/task3.png)
   
 ## Самостоятельная работа №4
-### Манипулирование строками. Напишите программу на Python, которая принимает предложение (на английском) в качестве входных данных от пользователя. Выполните следующие операции и отобразите результаты:<br>• Выведите длину предложения.<br>• Переведите предложение в нижний регистр.<br>• Подсчитайте количество гласных (a, e, i, o, u) в предложении.<br>• Замените все слова "ugly" на "beauty".<br>• Проверьте, начинается ли предложение с "The" и заканчивается ли на "end".<br>Проверьте работу программы минимум на 3 предложениях, чтобы охватить проверку всех поставленных условий.
+### Напишите программу, которая считает среднее арифметическое от аргументов вызываемое функции, с условием того, что изначальное количество этих аргументов неизвестно. Программу необходимо реализовать используя одну функцию и “точку входа”.
 
 ```python
-test = "The tTEST_ssiis acqwe ooo UuUu, ugly sdfwd qweqwincefvueugly end"
+def main(value, general, i):
+    i += 1
+    value = int(input("Введите число для расчета среднего ариметического: "))
+    general += value
+    print("Среднее ариметическое:", general/i)
+    main(value, general, i)
 
-print("Длина текста:", len(test))
-lowerText = test.lower()
-print("Текст в нижнем регистре:", lowerText)
-exampleLetters = "aeiou"
-howManyLetters = 0
-for u in exampleLetters:
-    for i in lowerText:
-        if i == u:
-            howManyLetters += 1
-    print(f"Букв {u} в тексте: {howManyLetters}")
-    howManyLetters = 0
-print(lowerText.replace('ugly', 'beauty'))
-print(test.startswith('The') and test.endswith('end'))
+if __name__ == '__main__':
+    main(0, 0, 0)
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/task4.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_4/img/task4.png)
 
 ## Самостоятельная работа №5
 ### Составьте программу, результатом которой будет данный вывод в консоль:<br>![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/5.1.png)<br>Программу нужно составить из данных фрагментов кода:<br>![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/5.2.png)<br>Строки кода можно использовать только один раз. Не обязательно использовать все строки кода.
