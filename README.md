@@ -106,26 +106,24 @@ if __name__ == '__main__':
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_4/img/task4.png)
 
 ## Самостоятельная работа №5
-### Составьте программу, результатом которой будет данный вывод в консоль:<br>![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/5.1.png)<br>Программу нужно составить из данных фрагментов кода:<br>![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_3/img/5.2.png)<br>Строки кода можно использовать только один раз. Не обязательно использовать все строки кода.
+### Создайте два Python файла, в одном будет выполняться вычисление площади треугольника при помощи формулы Герона (необходимо реализовать через функцию), а во втором будет происходить взаимодействие с пользователем (получение всей необходимой информации и вывод результатов). Напишите эту программу и выведите в консоль полученную площадь.
 
 ```python
-string = 'hello'
-counter = 0
-values = [0, 2, 4, 6, 8, 10]
-while counter != 10:
-    memory = string
-    if counter in values:
-        string = string + ' world'
-    print(string)
-    counter += 1
-    if counter < 10:
-        string = memory
-        memory = ' world'
-while ' world' not in string:
-    if counter > 7:
-        memory = ' world'
-    print(string + memory)
-    string = ' world'
+import task5_2
+
+print("Введите длину сторон треугольника")
+a = int(input("A:"))
+b = int(input("B:"))
+c = int(input("C:"))
+task5_2.calculatingArea(a, b, c)
+```
+
+```python
+from math import sqrt 
+
+def calculatingArea(a, b, c):
+    p = (a+b+c)/2
+    print("Результат:", sqrt(p*(p-a)*(p-b)*(p-c)))
 ```
 
 ### Результат.
