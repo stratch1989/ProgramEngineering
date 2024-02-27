@@ -104,25 +104,28 @@ print(modifyList(list3))
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_5/img/task4.png)
 
 ## Самостоятельная работа №5
-### Создайте два Python файла, в одном будет выполняться вычисление площади треугольника при помощи формулы Герона (необходимо реализовать через функцию), а во втором будет происходить взаимодействие с пользователем (получение всей необходимой информации и вывод результатов). Напишите эту программу и выведите в консоль полученную площадь.
+### Вам предоставлены списки натуральных чисел, из них необходимо сформировать множества. При этом следует соблюдать это правило: если какое-либо число повторяется, то преобразовать его в строку по следующему образцу: например, если число 4 повторяется 3 раза, то в множестве будет следующая запись: само число 4, строка «44», строка «444». Множества для теста:<br>list_1 = [1, 1, 3, 3, 1]<br>list_2 = [5, 5, 5, 5, 5, 5, 5]<br>list_3 = [2, 2, 1, 2, 2, 5, 6, 7, 1, 3, 2, 2]<br>Результаты вывода (порядок может отличаться, поскольку мы работаем с set()):<br>{'11', 1, 3, '33', '111'}<br>{5, '5555', '555555', '55555', '555', '55', '5555555'}<br>{'11', 1, 3, 2, 5, 6, '222222', '222', 7, '2222', '22222', '22'}
 
 ```python
-import task5_2
+list_1 = [1, 1, 3, 3, 1]
+list_2 = [5, 5, 5, 5, 5, 5, 5]
+list_3 = [2, 2, 1, 2, 2, 5, 6, 7, 1, 3, 2, 2]
 
-print("Введите длину сторон треугольника")
-a = int(input("A:"))
-b = int(input("B:"))
-c = int(input("C:"))
-task5_2.calculatingArea(a, b, c)
-```
 
-```python
-from math import sqrt 
-
-def calculatingArea(a, b, c):
-    p = (a+b+c)/2
-    print("Результат:", sqrt(p*(p-a)*(p-b)*(p-c)))
+def listsToSet(list):
+    setFromList = set(list)
+    sortSet = set()
+    for i in setFromList:
+        countDigit = list.count(i)
+        sortSet.add(i)
+        for y in range(2, countDigit+1):
+            sortSet.add(str(i)*y)
+    print(sortSet)
+    
+listsToSet(list_1)
+listsToSet(list_2)
+listsToSet(list_3)
 ```
 
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_4/img/task5.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_5/img/task5.png)
