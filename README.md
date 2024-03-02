@@ -92,23 +92,22 @@ my_equipment2.board()
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_8/img/task3.png)
   
 ## Самостоятельная работа №4
-### Напишите программу, которая получает на вход предложение, выводит его в терминал, заменяя все запрещенные слова звездочками * (количество звездочек равно количеству букв в слове). Запрещенные слова, разделенные символом пробела, хранятся в текстовом файле input.txt. Все слова в этом файле записаны в нижнем регистре. Программа должна заменить запрещенные слова, где бы они ни встречались, даже в середине другого слова. Замена производится независимо от регистра: если файл input.txt содержит запрещенное слово exam, то слова exam, Exam, ExaM, EXAM и exAm должны быть заменены на ****.
+### Самостоятельно реализуйте инкапсуляцию, продолжая работать с ранее созданным классом. Она должна отличаться, от того, что указана в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 
 ```python
-import re
+class Hobbie:
+    def __init__(self, type, name):
+        self._type = type
+        self.__name = name
 
-ftext = open('task4_1.txt', 'r')
-fwords = open('task4_2.txt', 'r')
+    def buy(self):
+        if self._type == "Sport" and self.__name == "Snowboarding":
+            print("Тогда нужно купить экипировку")
 
-text = str(ftext.readline())
-words = fwords.read().split()
-
-for stopword in words:
-    text = re.sub(stopword, lambda x: '*' * len(x.group()), text, flags=re.IGNORECASE)
-print(text)
-
-ftext.close
-fwords.close
+my_hobbie = Hobbie("Sport", "Snowboarding")
+print(f'Тип хобби - {my_hobbie._type}')
+print('Название хобби - {my_hobbie.__name}') #Не получается воспольховаться
+my_hobbie.buy()
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_7/img/task4.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_8/img/task4.png)
