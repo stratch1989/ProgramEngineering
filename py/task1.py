@@ -3,5 +3,5 @@ class Hobbie:
         self.type = type
         self.name = name
 
-my_car = Hobbie("Sport", "Snowboarding")
-print(f'Тип хобби - {my_car.type}, название хобби - {my_car.name}')
+my_hobbie = Hobbie("Sport", "Snowboarding")
+print(f'Тип хобби - {my_hobbie.type}, название хобби - {my_hobbie.name}')

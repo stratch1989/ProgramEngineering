@@ -25,45 +25,31 @@ class Hobbie:
         self.type = type
         self.name = name
 
-my_car = Hobbie("Sport", "Snowboarding")
-print(f'Тип хобби - {my_car.type}, название хобби - {my_car.name}')
+my_hobbie = Hobbie("Sport", "Snowboarding")
+print(f'Тип хобби - {my_hobbie.type}, название хобби - {my_hobbie.name}')
 ```
 ### Результат.
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_8/img/task1.png)
 
 ## Самостоятельная работа №2
-### У вас появилась потребность в ведении книги расходов, посмотрев все существующие варианты вы пришли к выводу что вас ничего не устраивает и нужно все делать самому. Напишите программу для учета расходов. Программа должна позволять вводить информацию о расходах, сохранять ее в файл и выводить существующие данные в консоль. Ввод информации происходит через консоль. Результатом выполнения задачи будет: скриншот файла с учетом расходов, листинг кода, и вывод в консоль, с демонстрацией работоспособности программы.
+### Самостоятельно создайте атрибуты и методы для ранее созданного класса. Они должны отличаться, от тех, что указаны в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 
 ```python
-#Востанавливаем данные из файла по последним тратам
-def readLastExpenses():
-    f = open('task2.txt', 'r')
-    lastExpenses_str = str(f.readlines()).replace("[", "").replace("]", "").replace("'", "")
-    lastExpenses_partitions = lastExpenses_str.split("|")
-    f.close
+class Hobbie:
+    def __init__(self, type, name):
+        self.type = type
+        self.name = name
 
-    lastExpenses = dict()
-    for i in range(len(lastExpenses_partitions)):
-        lastExpenses_topics = lastExpenses_partitions[i].split("+")
-        lastExpenses.update({lastExpenses_topics[0]: lastExpenses_topics[1]})
-    return lastExpenses
+    def drive(self):
+        if self.type == "Sport" and self.name == "Snowboarding":
+            print("Тогда нужно купить экиперовку")
 
-lastExpenses = readLastExpenses()
-
-#Получение новых данных
-expenseSum = float(input("Введите потраченную сумму: "))
-nameExpense = input("Введите имя категории трат: ")
-
-#Запись новых данных
-lastExpenses.update({nameExpense: expenseSum})
-with open('task2.txt', 'a') as f:
-    f.write(f'|{nameExpense}+{expenseSum}')
-    f.close
-
-print(lastExpenses)
+my_hobbie = Hobbie("Sport", "Snowboarding")
+print(f'Тип хобби - {my_hobbie.type}, название хобби - {my_hobbie.name}')
+my_hobbie.drive()
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_7/img/task2.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_8/img/task2.png)
 
 ## Самостоятельная работа №3
 ### Имеется файл input.txt с текстом на латинице. Напишите программу, которая выводит следующую статистику по тексту: количество букв латинского алфавита; число слов; число строк.
