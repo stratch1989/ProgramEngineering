@@ -40,41 +40,56 @@ class Hobbie:
         self.type = type
         self.name = name
 
-    def drive(self):
+    def buy(self):
         if self.type == "Sport" and self.name == "Snowboarding":
-            print("Тогда нужно купить экиперовку")
+            print("Тогда нужно купить экипировку")
 
 my_hobbie = Hobbie("Sport", "Snowboarding")
 print(f'Тип хобби - {my_hobbie.type}, название хобби - {my_hobbie.name}')
-my_hobbie.drive()
+my_hobbie.buy()
 ```
 ### Результат.
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_8/img/task2.png)
 
 ## Самостоятельная работа №3
-### Имеется файл input.txt с текстом на латинице. Напишите программу, которая выводит следующую статистику по тексту: количество букв латинского алфавита; число слов; число строк.
+## Самостоятельно реализуйте наследование, продолжая работать с ранее созданным классом. Оно должно отличаться, от того, что указано в теоретическом материале (методичке) и лабораторных заданиях. Результатом выполнения задания будет листинг кода и получившийся вывод консоли.
 
 ```python
-f = open('task3.txt', 'r')
-strings = 0
-letters = 0
-words = 0
-for i in f.readlines():
-    strings+=1
-    string = i
-    word = string.replace(".", "").rstrip().split(" ")
-    for y in word:
-        words+=1
-        for letter in y:
-            letters+=1
-print("Input file contains:")
-print(letters, "letters")
-print(words, "words")
-print(strings, "lines")
-f.close
+class Hobbie:
+    def __init__(self, type, name):
+        self.type = type
+        self.name = name
+
+    def buy(self):
+        print(f'Тип хобби - {self.type}, название хобби - {self.name}')
+        if self.type == "Sport" and self.name == "Snowboarding":
+            print("Тогда нужно купить доску")
+        elif self.type == "Sport" and self.name == "Run":
+            print("Тогда нужно купить кроссовки")
+        
+my_hobbie = Hobbie("Sport", "Run")
+my_hobbie.buy()
+
+class Equipment(Hobbie):
+    def __init__(self, type, name, direction):
+        super().__init__(type, name)
+        self.direction = direction
+
+    def board(self):
+        if self.direction == "Freeride":
+            print("Для вас хорошо подойдет доска 'BURTON FLIGHT ATTENDANT'")
+        if self.direction == "Carving":
+            print("Для вас хорошо подойдет доска 'Jones Freecarver 6000'")
+
+my_equipment1 = Equipment("Sport", "Snowboarding", "Freeride")
+my_equipment2 = Equipment("Sport", "Snowboarding", "Carving")
+my_equipment1.buy()
+my_equipment1.board()
+my_equipment2.buy()
+my_equipment2.board()
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_7/img/task3.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_8/img/task3.png)
   
 ## Самостоятельная работа №4
 ### Напишите программу, которая получает на вход предложение, выводит его в терминал, заменяя все запрещенные слова звездочками * (количество звездочек равно количеству букв в слове). Запрещенные слова, разделенные символом пробела, хранятся в текстовом файле input.txt. Все слова в этом файле записаны в нижнем регистре. Программа должна заменить запрещенные слова, где бы они ни встречались, даже в середине другого слова. Замена производится независимо от регистра: если файл input.txt содержит запрещенное слово exam, то слова exam, Exam, ExaM, EXAM и exAm должны быть заменены на ****.

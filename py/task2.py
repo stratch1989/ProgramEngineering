@@ -3,10 +3,10 @@ class Hobbie:
         self.type = type
         self.name = name
 
-    def drive(self):
+    def buy(self):
         if self.type == "Sport" and self.name == "Snowboarding":
-            print("Тогда нужно купить экиперовку")
+            print("Тогда нужно купить экипировку")
 
 my_hobbie = Hobbie("Sport", "Snowboarding")
 print(f'Тип хобби - {my_hobbie.type}, название хобби - {my_hobbie.name}')
-my_hobbie.drive()
+my_hobbie.buy()
