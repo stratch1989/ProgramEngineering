@@ -9,5 +9,5 @@ class Hobbie:
 
 my_hobbie = Hobbie("Sport", "Snowboarding")
 print(f'Тип хобби - {my_hobbie._type}')
-print('Название хобби - {my_hobbie.__name}') #Не получается воспольховаться
+print(f'Название хобби - {my_hobbie.__name}') #Не получается воспольховаться
 my_hobbie.buy()
