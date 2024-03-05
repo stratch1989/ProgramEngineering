@@ -161,5 +161,5 @@ Menu.choice()
 }
 ```
 ### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/1.PNG)
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/2.PNG)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/1.png)
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/2.png)
