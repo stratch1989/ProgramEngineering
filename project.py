@@ -1,14 +1,3 @@
-# Итоговый проект 
-Отчет по итоговому проекту выполнил(а):
-- Шайдуллин Руслан Дамирович
-- ЗПИЭ-21-1
-
-Работу проверили:
-- к.э.н., доцент Панов М.А.
-
-## Итоговый проект 
-
-```python
 import json
 from datetime import date
 
@@ -125,41 +114,3 @@ class Menu:
         Menu.choice()
 
 Menu.choice()
-```
-
-```json
-{
-    "history": {
-        "2024-03-03": {
-            "rent": 20000.0,
-            "food": 15000.0
-        },
-        "2024-03-04": {
-            "gas": 3000.0,
-            "food": 5000.0
-        },
-        "2024-03-05": {
-            "internet": 1200.0,
-            "phone": 70000.0,
-            "education": 30000.0,
-            "food": 2500.0,
-            "gas": 1000.0,
-            "taxi": 1500.0,
-            "music": 100.0
-        }
-    },
-    "statistic": {
-        "rent": 20000.0,
-        "food": 22500.0,
-        "gas": 4000.0,
-        "internet": 1200.0,
-        "phone": 70000.0,
-        "education": 30000.0,
-        "taxi": 1500.0,
-        "music": 100.0
-    }
-}
-```
-### Результат.
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/1.PNG)
-![Меню](https://github.com/stratch1989/ProgramEngineering/blob/main/img/2.PNG)
