@@ -1,14 +1,10 @@
-def read_file(filename):
-    try:
-        file = open(filename, 'r', encoding='utf-8-sig')
-        content = file.read()
-        if not content:
-            raise Exception("Файл пустой")
-        print(content)
-    except Exception as e:
-        print(str(e))
+def fib(n):
+    a, b = 1, 1
+    file = open('fibonacci.txt', 'w')
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+        file.write(str(a) + '\n')
 
-
-if __name__ == '__main__':
-    read_file('empty.txt')
-    read_file('noempty.txt')
+for i in fib(500):
+    print(i)
