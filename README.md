@@ -80,7 +80,7 @@ class HistoryParser:
 
 class NewCosts:
     def add_cost():
-            while True:
+        while True:
             try:
                 expenseSum = float(input("Введите потраченную сумму: "))
                 break
