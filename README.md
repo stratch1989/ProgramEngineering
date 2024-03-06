@@ -62,3 +62,77 @@ if __name__ == '__main__':
 
 ### Результат.
 ![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_10/img/task2.png)
+
+## Самостоятельная работа №3
+### Напишите функцию, которая будет складывать 2 и введенное пользователем число, но если пользователь введет строку или другой неподходящий тип данных, то в консоль выведется ошибка “Неподходящий тип данных. Ожидалось число.”. Реализовать функционал программы необходимо через try/except и подобрать правильный тип исключения. Создавать собственное исключение нельзя. Проведите несколько тестов, в которых исключение вызывается и нет. Результатом выполнения задачи будет листинг кода и получившийся вывод в консоль.
+
+```python
+def sum_two_numbers():
+    try:
+        num = float(input('Введите число:\n'))
+        res = num + 2
+        return res
+    except ValueError:
+        return 'Неподходящий тип данных. Ожидалось число.'
+
+print(sum_two_numbers())
+```
+
+### Результат.
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_10/img/task3.png)
+
+## Самостоятельная работа №4
+### Создайте собственный декоратор, который будет использоваться для двух любых вами придуманных функций. Декораторы, которые использовались ранее в работе нельзя воссоздавать. Результатом выполнения задачи будет: класс декоратора, две как-то связанными с ним функциями, скриншот консоли с выполненной программой и подробные комментарии, которые будут описывать работу вашего кода.
+
+```python
+class MyCustomException(Exception):
+    pass
+
+try:
+    raise MyCustomException("Пример ошибки")
+except MyCustomException as e:
+    print("Обработка ошибки:", e)
+
+def divide_numbers(a, b):
+    if b == 0:
+        raise MyCustomException("Деление на ноль")
+    return a / b
+
+try:
+    result = divide_numbers(10, 0)
+    print("Результат деления:", result)
+except MyCustomException as e:
+    print("Обработка ошибки:", e)
+```
+
+### Результат.
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_10/img/task4.png)
+
+## Самостоятельная работа №5
+### Создайте собственное исключение, которое будет использоваться в двух любых фрагментах кода. Исключения, которые использовались ранее в работе нельзя воссоздавать. Результатом выполнения задачи будет: класс исключения, код к котором в двух местах используется это исключение, скриншот консоли с выполненной программой и подробные комментарии, которые будут описывать работу вашего кода.
+
+```python
+class MyCustomException(Exception):
+    pass
+
+def check_positive_number(number):
+    if number < 0:
+        raise MyCustomException("Отрицательные числа не допускаются")
+
+try:
+    check_positive_number(-5)
+except MyCustomException as e:
+    print("Ошибка:", e)
+
+def process_data(data):
+    if not data:
+        raise MyCustomException("Пустые данные обнаружены")
+
+try:
+    process_data([])
+except MyCustomException as e:
+    print("Ошибка:", e)
+```
+
+### Результат.
+![Меню](https://github.com/stratch1989/ProgramEngineering/blob/Theme_10/img/task5.png)
