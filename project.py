@@ -69,7 +69,12 @@ class HistoryParser:
 
 class NewCosts:
     def add_cost():
-        expenseSum = float(input("Введите потраченную сумму: "))
+        while True:
+            try:
+                expenseSum = float(input("Введите потраченную сумму: "))
+                break
+            except ValueError:
+                print("Ошибка. Нужно ввести число")
         nameExpense = input("Введите имя категории трат: ")
         today = str(date.today())
         json_data = GetJson.opene()
